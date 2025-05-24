@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crypto Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="crypto.html">Crypto</a>
+  </nav>
+
+  <div class="container">
+    <h2>Top Cryptocurrencies</h2>
+    <div id="crypto-container"></div>
+  </div>
+
+  <script>
+    const container = document.getElementById('crypto-container');
+
+    fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&per_page=5&page=1')
+      .then(res => res.json())
+      .then(data => {
+        data.forEach(coin => {
+          const div = document.createElement('div');
+          div.className = 'card';
+          div.innerHTML = `
+            <h3>${coin.name} (${coin.symbol.toUpperCase()})</h3>
+            <p>Price: $${coin.current_price}</p>
+            <p>Market Cap: $${coin.market_cap.toLocaleString()}</p>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        container.innerHTML = '<p>Error loading crypto data.</p>';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
