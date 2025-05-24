@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Farhan's Profile</title>
   <style>
-    /* Reset */
     *, *::before, *::after {
       box-sizing: border-box;
     }
@@ -13,8 +12,8 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f0f4f8;  /* Light cool background */
-      color: #333;           /* Dark text */
+      background: #f0f4f8;
+      color: #333;
       line-height: 1.6;
       padding: 0 1rem;
     }
@@ -25,9 +24,8 @@
       margin-right: auto;
     }
 
-    /* Navigation Bar */
     nav {
-      background-color: #005f73; /* Deep teal */
+      background-color: #005f73;
       display: flex;
       justify-content: center;
       gap: 2rem;
@@ -44,11 +42,11 @@
     }
 
     nav:hover {
-      background-color: #0a9396; /* Lighter teal on hover */
+      background-color: #0a9396;
     }
 
     nav a {
-      color: #e9d8a6; /* Soft yellow */
+      color: #e9d8a6;
       text-decoration: none;
       font-size: 1rem;
       padding: 0.5rem 1rem;
@@ -58,21 +56,31 @@
 
     nav a:hover,
     nav a:focus-visible {
-      background-color: #94d2bd; /* Soft mint */
-      color: #001219; /* Dark blue */
+      background-color: #94d2bd;
+      color: #001219;
       outline: none;
       box-shadow: 0 0 8px #94d2bd;
     }
 
-    /* Headings */
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 3rem;
       text-align: center;
-      margin: 3rem 0 1rem;
+      margin: 2rem 0 1rem;
       color: #001219;
       font-weight: 900;
       letter-spacing: 0.05em;
+    }
+
+    .profile-pic {
+      display: block;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      border: 4px solid #005f73;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     }
 
     h2 {
@@ -95,7 +103,6 @@
       margin-bottom: 0.5rem;
     }
 
-    /* Paragraphs */
     p {
       font-size: 1.125rem;
       max-width: 720px;
@@ -104,7 +111,6 @@
       text-align: center;
     }
 
-    /* Lists */
     ul {
       list-style-type: disc;
       padding-left: 1.8rem;
@@ -118,9 +124,8 @@
       margin-bottom: 0.6rem;
     }
 
-    /* Sections */
     section {
-      background: #e9f1f7; /* Soft blue background */
+      background: #e9f1f7;
       padding: 2rem;
       margin-bottom: 2rem;
       border-radius: 14px;
@@ -134,7 +139,6 @@
       color: #333;
     }
 
-    /* Links */
     a[href^="mailto"],
     a[href^="http"] {
       color: #005f73;
@@ -152,7 +156,6 @@
       outline: none;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -179,6 +182,7 @@
   </nav>
 
   <h1>Hello, I'm Farhan</h1>
+  <img src="profile.jpeg" alt="Farhan profile photo" class="profile-pic" />
   <p>Welcome to my personal website. I'm passionate about technology, coding, and staying informed with the latest trends.</p>
 
   <h2>About Me</h2>
@@ -194,21 +198,21 @@
   <h2>Work Experience</h2>
 
   <section>
-    <h3>Smart Farming Intern – AgriTech Lab</h3>
+    <h3>IoT & Automation Intern – AgriTech Lab</h3>
     <p>Jan 2024 – May 2024</p>
-    <p>Built a smart chicken coop with sensors, automation, and dashboard monitoring using Arduino and MySQL.</p>
+    <p>Designed and developed system using Arduino and MySQL. Implemented environmental sensors for temperature, humidity, and ammonia detection. Developed a real-time dashboard for monitoring and alerting, contributing to sustainable and automated farming solutions.</p>
   </section>
 
   <section>
-    <h3>Freelance Web Developer</h3>
+    <h3>Freelance Front-End Web Developer</h3>
     <p>2023 – Present</p>
-    <p>Designed responsive websites for small businesses. Focused on UI/UX and clean code. Deployed using GitHub Pages.</p>
+    <p>Collaborated with clients to design modern, responsive websites. Specialized in clean UI, accessibility, and mobile-first design. Deployed projects on GitHub Pages with version control using Git.</p>
   </section>
 
   <h2>Contact Me</h2>
   <p>Email: <a href="mailto:ahmadfarhan979@gmail.com">ahmadfarhan979@gmail.com</a></p>
   <p>
-    <a href="https://github.com/farhanem989/ApiTest" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+    <a href="https://github.com/farhanem989/ApiTest" target="_blank" rel="noopener noreferrer">GitHub</a> |
     <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">LinkedIn</a>
   </p>
 
