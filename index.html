@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Personal Profile</title>
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f0f4f8, #e2e8f0);
+      color: #2c3e50;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    nav {
+      background-color: #1e3a8a;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav a {
+      color: #ffffff;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      transition: color 0.3s, transform 0.3s;
+    }
+
+    nav a:hover {
+      color: #a5d8ff;
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 2rem auto;
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease-in-out;
+    }
+
+    h1 {
+      color: #1e3a8a;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    h2 {
+      color: #2563eb;
+      font-size: 1.6rem;
+      margin-top: 2rem;
+      margin-bottom: 0.5rem;
+      border-bottom: 2px solid #cbd5e1;
+      padding-bottom: 0.4rem;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.6rem;
+    }
+
+    .card {
+      background-color: #f8fafc;
+      padding: 1.2rem;
+      margin-top: 1rem;
+      border-left: 5px solid #3b82f6;
+      border-radius: 10px;
+      box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #1d4ed8;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem 1rem 0 0;
+      padding: 0.6rem 1.2rem;
+      background-color: #1e40af;
+      color: #ffffff;
+      border-radius: 6px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .contact a:hover {
+      background-color: #3b82f6;
+      transform: scale(1.05);
+    }
+
+    .contact p {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+
+      .container {
+        padding: 1.2rem;
+        margin: 1rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="crypto.html">Crypto</a>
+  </nav>
+
+  <div class="container">
+    <h1>Hello, I'm Farhan</h1>
+    <p>Welcome to my personal website. I'm passionate about technology, coding, and staying informed with the latest news and trends in the digital world.</p>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I’m a tech enthusiast with a strong interest in software development, web design, and emerging technologies like AI and blockchain. I love building useful tools, solving problems through code, and learning new things every day. Outside of tech, I enjoy reading, traveling, and exploring nature.
+      </p>
+      <p>
+        I graduated with a degree in Internet Computing and have built several projects involving smart agriculture, automation systems, and API-based dashboards. My goal is to contribute to impactful projects and continue growing as a developer.
+      </p>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> HTML, CSS, JavaScript, Python, Java</li>
+        <li><strong>Web:</strong> RESTful APIs, AJAX, JSON, GitHub Pages</li>
+        <li><strong>Frameworks/Tools:</strong> Bootstrap, React (basic), Node.js, Git</li>
+        <li><strong>Others:</strong> UI/UX Design Basics, Responsive Web Design, IoT Concepts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Work Experience</h2>
+      <div class="card">
+        <h3>Intern - Smart Farming System Developer</h3>
+        <p><strong>Company:</strong> AgriTech Lab</p>
+        <p><strong>Duration:</strong> Jan 2024 – May 2024</p>
+        <p>
+          Developed a smart chicken coop integrated with environmental sensors and automated farming controls using Arduino and web-based monitoring dashboards. Worked on integrating MySQL databases and real-time IoT data.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Freelance Web Developer</h3>
+        <p><strong>Client:</strong> Small Business Websites</p>
+        <p><strong>Duration:</strong> 2023 – Present</p>
+        <p>
+          Designed and developed responsive personal and business websites. Provided consultation on UI/UX improvements and deployed projects using GitHub Pages and Netlify.
+        </p>
+      </div>
+    </section>
+
+    <section class="contact">
+      <h2>Contact Me</h2>
+      <p>Email: <a href="mailto:ahmadfarhan979@gmail.com">ahmadfarhan979@gmail.com</a></p>
+      <a href="https://github.com/farhanem989/ApiTest" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+    </section>
+  </div>
+
+</body>
+</html>
