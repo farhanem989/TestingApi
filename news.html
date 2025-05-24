@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>News Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="crypto.html">Crypto</a>
+  </nav>
+
+  <div class="container">
+    <h2>Latest News</h2>
+    <div id="news-container"></div>
+  </div>
+
+  <script>
+    const apiKey = 5d41040fc48b4fedbb4962e774b4b487; // Replace with your API key
+    const container = document.getElementById('news-container');
+
+    fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=${apiKey}`)
+      .then(res => res.json())
+      .then(data => {
+        data.articles.forEach(article => {
+          const div = document.createElement('div');
+          div.className = 'card';
+          div.innerHTML = `
+            <h3>${article.title}</h3>
+            <p>${article.description || 'No description available.'}</p>
+            <a href="${article.url}" target="_blank">Read more</a>
+          `;
+          container.appendChild(div);
+        });
+      })
+      .catch(err => {
+        container.innerHTML = '<p>Error loading news.</p>';
+        console.error(err);
+      });
+  </script>
+</body>
+</html>
