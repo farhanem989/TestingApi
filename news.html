@@ -13,8 +13,8 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: #f0f4f8;  /* Light cool background */
-      color: #333;           /* Dark text */
+      background: #f0f4f8;
+      color: #333;
       line-height: 1.6;
       padding: 0 1rem;
     }
@@ -25,9 +25,8 @@
       margin-right: auto;
     }
 
-    /* Navigation Bar */
     nav {
-      background-color: #005f73; /* Deep teal */
+      background-color: #005f73;
       display: flex;
       justify-content: center;
       gap: 2rem;
@@ -44,11 +43,11 @@
     }
 
     nav:hover {
-      background-color: #0a9396; /* Lighter teal on hover */
+      background-color: #0a9396;
     }
 
     nav a {
-      color: #e9d8a6; /* Soft yellow */
+      color: #e9d8a6;
       text-decoration: none;
       font-size: 1rem;
       padding: 0.5rem 1rem;
@@ -58,13 +57,12 @@
 
     nav a:hover,
     nav a:focus-visible {
-      background-color: #94d2bd; /* Soft mint */
-      color: #001219; /* Dark blue */
+      background-color: #94d2bd;
+      color: #001219;
       outline: none;
       box-shadow: 0 0 8px #94d2bd;
     }
 
-    /* Headings */
     h2 {
       font-family: 'Montserrat', sans-serif;
       font-size: 2rem;
@@ -78,13 +76,11 @@
       text-align: center;
     }
 
-    /* Container */
     .container {
       margin-top: 2rem;
       max-width: 720px;
     }
 
-    /* News cards */
     #news-container {
       display: flex;
       flex-direction: column;
@@ -132,7 +128,6 @@
       outline: none;
     }
 
-    /* Responsive */
     @media (max-width: 600px) {
       nav {
         flex-direction: column;
@@ -159,14 +154,15 @@
   </div>
 
   <script>
-    // Put your API key as a string inside quotes!
-    const apiKey = '5d41040fc48b4fedbb4962e774b4b487'; // Replace with your API key
+    const apiKey = 'c06a8e683e269fe1b20aca88d15242f9'; // Your GNews API key here
     const container = document.getElementById('news-container');
 
-    fetch(`https://newsapi.org/v2/top-headlines?country=us&pageSize=5&apiKey=${apiKey}`)
+    // GNews API endpoint: https://gnews.io/api/v4/top-headlines
+    // Parameters: token (apiKey), lang, country, max (number of articles)
+    fetch(`https://gnews.io/api/v4/top-headlines?token=${apiKey}&lang=en&country=us&max=5`)
       .then(res => res.json())
       .then(data => {
-        container.innerHTML = ''; // clear loading text
+        container.innerHTML = '';
 
         if (!data.articles || data.articles.length === 0) {
           container.innerHTML = '<p>No news articles found.</p>';
@@ -176,6 +172,7 @@
         data.articles.forEach(article => {
           const div = document.createElement('div');
           div.className = 'card';
+
           div.innerHTML = `
             <h3>${article.title}</h3>
             <p>${article.description || 'No description available.'}</p>
